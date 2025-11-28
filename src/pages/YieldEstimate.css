@@ -1,0 +1,368 @@
+.yield-estimate {
+  width: 100%;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.breadcrumb a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumb .separator {
+  color: var(--color-text-tertiary);
+}
+
+.breadcrumb .current {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+/* 统计卡片 */
+.estimate-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+}
+
+.stat-card .stat-icon {
+  font-size: 2rem;
+}
+
+.stat-card .stat-content {
+  flex: 1;
+}
+
+.stat-card .stat-label {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.stat-card .stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.stat-card .stat-value small {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.stat-card.primary {
+  border-left: 4px solid var(--color-primary);
+}
+
+.stat-card.success {
+  border-left: 4px solid var(--color-secondary);
+}
+
+.stat-card.info {
+  border-left: 4px solid var(--color-info);
+}
+
+.stat-card.warning {
+  border-left: 4px solid var(--color-warning);
+}
+
+.stat-card .progress-bar {
+  height: 6px;
+  background: var(--color-bg-tertiary);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.stat-card .progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+/* 内容区域 */
+.estimate-content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 1rem;
+}
+
+/* 分区列表 */
+.zone-list-section {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  padding: 1.25rem;
+}
+
+.section-header {
+  margin-bottom: 1rem;
+}
+
+.section-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.zone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.zone-card {
+  display: flex;
+  gap: 1rem;
+  padding: 0.875rem;
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.zone-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.zone-card.completed {
+  opacity: 0.7;
+}
+
+.zone-image {
+  position: relative;
+  width: 100px;
+  height: 75px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.zone-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.zone-status {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  padding: 0.125rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: white;
+}
+
+.zone-status.not_started {
+  background: var(--color-text-tertiary);
+}
+
+.zone-status.in_progress {
+  background: var(--color-primary);
+}
+
+.zone-status.completed {
+  background: var(--color-secondary);
+}
+
+.zone-content {
+  flex: 1;
+}
+
+.zone-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--color-text-primary);
+}
+
+.zone-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.zone-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.zone-stat .stat-label {
+  font-size: 0.625rem;
+  color: var(--color-text-tertiary);
+}
+
+.zone-stat .stat-value {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.zone-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.zone-progress .progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--color-bg-primary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.zone-progress .progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border-radius: 3px;
+}
+
+.progress-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  min-width: 35px;
+}
+
+/* 图表区域 */
+.charts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chart-card {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  padding: 1.25rem;
+}
+
+.chart-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--color-text-primary);
+}
+
+.pie-chart-container {
+  margin-bottom: 0.5rem;
+}
+
+.grade-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.grade-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.grade-legend .legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.grade-legend .legend-value {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* AI说明 */
+.ai-note {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--color-primary-light), #FFF5EE);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-primary);
+}
+
+.note-icon {
+  font-size: 2rem;
+}
+
+.note-content h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 0.375rem 0;
+  color: var(--color-primary);
+}
+
+.note-content p {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.note-content strong {
+  color: var(--color-primary);
+}
+
+/* 响应式 */
+@media (max-width: 1024px) {
+  .estimate-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .estimate-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .estimate-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .zone-card {
+    flex-direction: column;
+  }
+
+  .zone-image {
+    width: 100%;
+    height: 120px;
+  }
+
+  .zone-stats {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,490 @@
+.cold-storage {
+  width: 100%;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.breadcrumb a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumb .separator {
+  color: var(--color-text-tertiary);
+}
+
+.breadcrumb .current {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+/* 统计卡片 */
+.storage-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+}
+
+.stat-card .stat-icon {
+  font-size: 2rem;
+}
+
+.stat-card .stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card .stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.stat-card .stat-value small {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.stat-card .stat-label {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+}
+
+/* 布局 */
+.storage-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr 280px;
+  gap: 1rem;
+}
+
+/* 冷库列表 */
+.room-list {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  padding: 1.25rem;
+}
+
+.section-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--color-text-primary);
+}
+
+.rooms {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.room-card {
+  padding: 0.875rem;
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.room-card:hover {
+  background: var(--color-bg-secondary);
+}
+
+.room-card.selected {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.room-card.warning {
+  border-left: 3px solid var(--color-warning);
+}
+
+.room-card.alert {
+  border-left: 3px solid var(--color-danger);
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.room-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.room-status {
+  font-size: 0.625rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.room-status.normal {
+  background: var(--color-secondary-light);
+  color: var(--color-secondary);
+}
+
+.room-status.warning {
+  background: var(--color-primary-light);
+  color: var(--color-warning);
+}
+
+.room-status.alert {
+  background: #FFEBEE;
+  color: var(--color-danger);
+}
+
+.room-metrics {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.metric-icon {
+  font-size: 0.75rem;
+}
+
+.metric-value {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.metric-value.warning {
+  color: var(--color-warning);
+}
+
+.room-capacity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.capacity-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--color-bg-primary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.capacity-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+.capacity-text {
+  font-size: 0.6875rem;
+  color: var(--color-text-tertiary);
+  min-width: 55px;
+}
+
+/* 详细监控 */
+.room-detail {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  padding: 1.25rem;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.detail-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.update-time {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+}
+
+/* 大数字显示 */
+.big-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.big-metric {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.big-metric.temp {
+  background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+}
+
+.big-metric.humidity {
+  background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+}
+
+.big-metric .metric-label {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.big-metric .metric-value {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.big-metric .value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.big-metric .unit {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+}
+
+.big-metric .metric-range {
+  font-size: 0.6875rem;
+  color: var(--color-text-tertiary);
+  margin-top: 0.5rem;
+}
+
+/* 趋势图 */
+.trend-chart {
+  margin-bottom: 1.5rem;
+}
+
+.trend-chart h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--color-text-primary);
+}
+
+/* 控制面板 */
+.control-panel h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--color-text-primary);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.control-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+}
+
+.control-label {
+  flex: 1;
+  font-size: 0.8125rem;
+  color: var(--color-text-primary);
+}
+
+.control-status {
+  font-size: 0.6875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.control-status.on {
+  background: var(--color-secondary-light);
+  color: var(--color-secondary);
+}
+
+.control-status.off {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-tertiary);
+}
+
+.control-btn {
+  padding: 0.375rem 0.75rem;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.6875rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.control-btn:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* 告警面板 */
+.alerts-panel {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  padding: 1.25rem;
+}
+
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.alert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 0.625rem;
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+}
+
+.alert-item.warning {
+  background: #FFF8E1;
+  border-left: 3px solid var(--color-warning);
+}
+
+.alert-item.info {
+  border-left: 3px solid var(--color-info);
+}
+
+.alert-icon {
+  font-size: 1rem;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-message {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.alert-time {
+  font-size: 0.625rem;
+  color: var(--color-text-tertiary);
+}
+
+/* 日志 */
+.log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.log-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.log-item:last-child {
+  border-bottom: none;
+}
+
+.log-time {
+  font-size: 0.6875rem;
+  color: var(--color-text-tertiary);
+  min-width: 40px;
+}
+
+.log-text {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+/* 响应式 */
+@media (max-width: 1200px) {
+  .storage-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .room-list {
+    order: 1;
+  }
+
+  .rooms {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .room-detail {
+    order: 2;
+  }
+
+  .alerts-panel {
+    order: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .storage-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rooms {
+    grid-template-columns: 1fr;
+  }
+
+  .big-metrics {
+    grid-template-columns: 1fr;
+  }
+}

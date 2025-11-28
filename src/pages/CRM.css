@@ -1,0 +1,384 @@
+.crm {
+  width: 100%;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.breadcrumb a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumb .separator {
+  color: var(--color-text-tertiary);
+}
+
+.breadcrumb .current {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+/* 统计卡片 */
+.crm-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+}
+
+.stat-card .stat-icon {
+  font-size: 2rem;
+}
+
+.stat-card .stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card .stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.stat-card .stat-label {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+}
+
+/* 工具栏 */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.875rem 1.25rem;
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-tab {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-tab:hover {
+  background: var(--color-bg-tertiary);
+}
+
+.filter-tab.active {
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar-right {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+}
+
+.search-icon {
+  font-size: 0.875rem;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.8125rem;
+  width: 150px;
+}
+
+.add-btn {
+  padding: 0.5rem 1rem;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.add-btn:hover {
+  background: var(--color-primary-hover);
+}
+
+/* 客户列表 */
+.customer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.customer-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-fast);
+}
+
+.customer-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* 头像 */
+.customer-avatar {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.customer-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.level-badge {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  padding: 0.125rem 0.375rem;
+  border-radius: 6px;
+  font-size: 0.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.level-badge.vip {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+}
+
+.level-badge.gold {
+  background: linear-gradient(135deg, #FFD700, #DAA520);
+}
+
+.level-badge.silver {
+  background: linear-gradient(135deg, #C0C0C0, #A9A9A9);
+}
+
+.level-badge.normal {
+  background: var(--color-text-tertiary);
+}
+
+/* 客户信息 */
+.customer-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.customer-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.customer-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.type-badge {
+  padding: 0.125rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.type-badge.enterprise {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.type-badge.dealer {
+  background: var(--color-secondary-light);
+  color: var(--color-secondary);
+}
+
+.type-badge.retail {
+  background: var(--color-info-light);
+  color: var(--color-info);
+}
+
+.customer-contact {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+/* 客户统计 */
+.customer-stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.customer-stats .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.customer-stats .stat-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.customer-stats .stat-label {
+  font-size: 0.625rem;
+  color: var(--color-text-tertiary);
+}
+
+/* 操作按钮 */
+.customer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  padding: 0.5rem 1rem;
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.action-btn:hover {
+  background: var(--color-bg-secondary);
+}
+
+.action-btn.primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.action-btn.primary:hover {
+  background: var(--color-primary-hover);
+}
+
+/* 响应式 */
+@media (max-width: 1024px) {
+  .crm-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .customer-card {
+    flex-wrap: wrap;
+  }
+
+  .customer-stats {
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .customer-actions {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .crm-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+
+  .toolbar-right {
+    flex-direction: column;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+
+  .customer-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .customer-contact {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
