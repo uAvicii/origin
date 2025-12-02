@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { RichTextEditor } from '../components/RichTextEditor';
 import './FarmingTasks.css';
 
 interface Task {
@@ -19,6 +20,7 @@ export const FarmingTasks = () => {
   const [assigneeFilter, setAssigneeFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [showNewTaskModal, setShowNewTaskModal] = useState(false);
+  const [taskDescription, setTaskDescription] = useState('');
 
   // 模拟任务数据
   const tasks: Task[] = [
@@ -332,7 +334,11 @@ export const FarmingTasks = () => {
 
             <div className="form-group">
               <label>任务描述</label>
-              <textarea className="form-input textarea" placeholder="请输入任务详细描述..." rows={3}></textarea>
+              <RichTextEditor
+                value={taskDescription}
+                onChange={setTaskDescription}
+                placeholder="请输入任务详细描述..."
+              />
             </div>
 
             <div className="modal-actions">

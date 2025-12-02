@@ -1,0 +1,113 @@
+.rich-text-editor {
+  width: 100%;
+}
+
+.rich-text-editor .quill {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  overflow: visible;
+  background: #fff;
+}
+
+.rich-text-editor .ql-toolbar {
+  border: none;
+  border-bottom: 1px solid #eee;
+  background: #f8f9fa;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.rich-text-editor .ql-toolbar .ql-formats {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-right: 8px;
+  padding-right: 8px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.rich-text-editor .ql-toolbar .ql-formats:last-child {
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.rich-text-editor .ql-toolbar button {
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rich-text-editor .ql-toolbar button:hover {
+  background: #e9ecef;
+}
+
+.rich-text-editor .ql-toolbar button.ql-active {
+  background: #ff6b35;
+  color: #fff;
+}
+
+.rich-text-editor .ql-toolbar button.ql-active .ql-stroke {
+  stroke: #fff;
+}
+
+.rich-text-editor .ql-toolbar button.ql-active .ql-fill {
+  fill: #fff;
+}
+
+.rich-text-editor .ql-toolbar .ql-color-picker,
+.rich-text-editor .ql-toolbar .ql-background {
+  width: 28px;
+  height: 28px;
+}
+
+.rich-text-editor .ql-toolbar .ql-picker-label {
+  border: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.rich-text-editor .ql-toolbar .ql-picker-label:hover {
+  background: #e9ecef;
+}
+
+.rich-text-editor .ql-toolbar .ql-picker.ql-expanded .ql-picker-label {
+  background: #e9ecef;
+}
+
+.rich-text-editor .ql-toolbar .ql-picker-options {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  background: #fff;
+}
+
+.rich-text-editor .ql-container {
+  border: none;
+  font-size: 14px;
+  min-height: 100px;
+}
+
+.rich-text-editor .ql-editor {
+  min-height: 100px;
+  padding: 12px;
+  line-height: 1.6;
+}
+
+.rich-text-editor .ql-editor.ql-blank::before {
+  color: #aaa;
+  font-style: normal;
+  left: 12px;
+}
+
+.rich-text-editor:focus-within .quill {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
